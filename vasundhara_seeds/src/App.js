@@ -6,7 +6,7 @@ import Inwards from './pages/Inwards'
 function App() {
  return(
   <div>
-    <img src='/logo.jpg' alt = 'Logo' width='150' />
+    <img src='/logo.jpg' alt = 'Logo' width='200' />
     <Navbar />
       <Routes>
         <Route path = '/inwards' element ={<Inwards />}/>
