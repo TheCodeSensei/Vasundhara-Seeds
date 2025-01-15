@@ -11,7 +11,9 @@ const App = () => {
   const readExcel = () => {
     const sheetID = '1qLOLzHPaIOl2hAzHG2gKbslzfisxAKScRH_s0p8F2gM'; // Replace with your actual Sheet ID
     const sheetName = 'INWARDDATA'; // Replace with the name of your sheet
-    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${sheetName}?key=AIzaSyADAcmnbBa-5NEC7qLzz7QNE5Qv9QCLwHQ`;
+    const GOOGLE_API = process.env.REACT_APP_GOOGLE_API_KEY;
+    console.log(GOOGLE_API)
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${sheetName}?key=${GOOGLE_API}`;
   
     fetch(apiUrl)
       .then((response) => response.json())
