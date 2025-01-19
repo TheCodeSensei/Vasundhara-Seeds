@@ -71,7 +71,7 @@ export default function Navbar() {
                   <span className="sr-only">Open user menu</span>
                   <img
                     alt=""
-                    src="/icon.jpg"
+                    src={process.env.PUBLIC_URL + "/icon.jpg"}
                     className="size-8 rounded-full"
                   />
                 </MenuButton>

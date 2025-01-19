@@ -225,8 +225,8 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
             </div>
 
         ))}
-      <button onClick={reset_filters} type="button"><img src = "./reset.png"/>Reset</button>
-      <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none bg-grey rounded-full border hover:text-black-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black-400 dark:border-gray-600" onClick={reloadinward}><img src = "./tap.png"/> Reload Inward Data</button><br></br>
+      <button onClick={reset_filters} type="button"><img src = {process.env.PUBLIC_URL + "/reset.png"}/>Reset</button>
+      <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none bg-grey rounded-full border hover:text-black-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-black-400 dark:border-gray-600" onClick={reloadinward}><img src ={process.env.PUBLIC_URL + "/tap.png"}/> Reload Inward Data</button><br></br>
             {/* <label margin="50%">Reload Inward Data</label> */}
       </div>
 

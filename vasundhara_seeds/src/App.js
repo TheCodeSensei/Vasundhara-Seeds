@@ -10,14 +10,16 @@ import Footer from './Footer';
 function App() {
  return(
   <div>
-    <img src='/logo.jpg' alt = 'Logo' width='200' />
+    <img src={process.env.PUBLIC_URL + '/logo.jpg'} alt = 'Logo' width='200' />
+    <Router basename="/Vasundhara-Seeds">
       <Routes>
         <Route path = '/' element ={<DashBoard />}/>
         <Route path = '/inventory' element ={<Inventory />}/>
         <Route path = '/invoices' element ={<Invoices />}/>
         <Route path = '/inwards' element ={<Inwards />}/>
       </Routes>
-      <Footer />
+      </Router>
+      {/* <Footer /> */}
   </div>
 
  );
