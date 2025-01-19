@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.63a90c5e.css",
-    "main.js": "/static/js/main.401fc41d.js",
-    "static/js/453.6d713947.chunk.js": "/static/js/453.6d713947.chunk.js",
-    "index.html": "/index.html",
-    "main.63a90c5e.css.map": "/static/css/main.63a90c5e.css.map",
-    "main.401fc41d.js.map": "/static/js/main.401fc41d.js.map",
-    "453.6d713947.chunk.js.map": "/static/js/453.6d713947.chunk.js.map"
+    "main.css": "/Vasundhara-Seeds/static/css/main.63a90c5e.css",
+    "main.js": "/Vasundhara-Seeds/static/js/main.7f0f4703.js",
+    "static/js/453.6d713947.chunk.js": "/Vasundhara-Seeds/static/js/453.6d713947.chunk.js",
+    "index.html": "/Vasundhara-Seeds/index.html",
+    "main.63a90c5e.css.map": "/Vasundhara-Seeds/static/css/main.63a90c5e.css.map",
+    "main.7f0f4703.js.map": "/Vasundhara-Seeds/static/js/main.7f0f4703.js.map",
+    "453.6d713947.chunk.js.map": "/Vasundhara-Seeds/static/js/453.6d713947.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63a90c5e.css",
-    "static/js/main.401fc41d.js"
+    "static/js/main.7f0f4703.js"
   ]
 }
