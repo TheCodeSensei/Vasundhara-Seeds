@@ -1,0 +1,7 @@
+Add Navigation from Inwards page to home page and other pages. 
+Add a reset button for the filters.[DONE]
+Add a Reload Inwards Data button. [DONE]
+Add a Summary Page. [DONE]
+
+App Script URL :https://script.google.com/macros/s/AKfycbwUgm6H0YgLQD3ltU7CDsjtGtX6o1AM-DmeqnMCU1jIDkSukVRFmvXrWRlpRUrJVTMA/exec
+Update the Temporarary Inward Sheet with actual Sheet
