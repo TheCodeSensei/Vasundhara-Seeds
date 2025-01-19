@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Vasundhara-Seeds/static/css/main.63a90c5e.css",
-    "main.js": "/Vasundhara-Seeds/static/js/main.b7003f0b.js",
+    "main.js": "/Vasundhara-Seeds/static/js/main.ba08bf50.js",
     "static/js/453.6d713947.chunk.js": "/Vasundhara-Seeds/static/js/453.6d713947.chunk.js",
     "index.html": "/Vasundhara-Seeds/index.html",
     "main.63a90c5e.css.map": "/Vasundhara-Seeds/static/css/main.63a90c5e.css.map",
-    "main.b7003f0b.js.map": "/Vasundhara-Seeds/static/js/main.b7003f0b.js.map",
+    "main.ba08bf50.js.map": "/Vasundhara-Seeds/static/js/main.ba08bf50.js.map",
     "453.6d713947.chunk.js.map": "/Vasundhara-Seeds/static/js/453.6d713947.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63a90c5e.css",
-    "static/js/main.b7003f0b.js"
+    "static/js/main.ba08bf50.js"
   ]
 }
