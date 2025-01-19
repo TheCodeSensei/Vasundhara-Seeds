@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Vasundhara-Seeds/vasundhara_seeds/static/css/main.63a90c5e.css",
-    "main.js": "/Vasundhara-Seeds/vasundhara_seeds/static/js/main.e0a50655.js",
-    "static/js/453.6d713947.chunk.js": "/Vasundhara-Seeds/vasundhara_seeds/static/js/453.6d713947.chunk.js",
-    "index.html": "/Vasundhara-Seeds/vasundhara_seeds/index.html",
-    "main.63a90c5e.css.map": "/Vasundhara-Seeds/vasundhara_seeds/static/css/main.63a90c5e.css.map",
-    "main.e0a50655.js.map": "/Vasundhara-Seeds/vasundhara_seeds/static/js/main.e0a50655.js.map",
-    "453.6d713947.chunk.js.map": "/Vasundhara-Seeds/vasundhara_seeds/static/js/453.6d713947.chunk.js.map"
+    "main.css": "/Vasundhara-Seeds/static/css/main.63a90c5e.css",
+    "main.js": "/Vasundhara-Seeds/static/js/main.e8426cea.js",
+    "static/js/453.6d713947.chunk.js": "/Vasundhara-Seeds/static/js/453.6d713947.chunk.js",
+    "index.html": "/Vasundhara-Seeds/index.html",
+    "main.63a90c5e.css.map": "/Vasundhara-Seeds/static/css/main.63a90c5e.css.map",
+    "main.e8426cea.js.map": "/Vasundhara-Seeds/static/js/main.e8426cea.js.map",
+    "453.6d713947.chunk.js.map": "/Vasundhara-Seeds/static/js/453.6d713947.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63a90c5e.css",
-    "static/js/main.e0a50655.js"
+    "static/js/main.e8426cea.js"
   ]
 }
