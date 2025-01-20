@@ -4,7 +4,7 @@ import Inwards from './pages/Inwards';
 import DashBoard from './components/DashBoard';
 import Inventory from './components/Inventory';
 import Invoices from './components/Invoices';
-import Footer from './Footer';
+import Footer from './components/Footer';
 
 function App() {
  return(
@@ -21,7 +21,7 @@ function App() {
       </Routes>
       {/* </Router> */}
       </BrowserRouter>
-      {/* <Footer /> */}
+      <Footer />
   </div>
 
  );

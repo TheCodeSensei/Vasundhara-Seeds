@@ -36,27 +36,27 @@ export default function Summary(props){
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab" ref={statsRef}
         >
             <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
-                <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-left justify-center">
                     <dt class="mb-2 text-3xl font-extrabold">Total Bags</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[0]}</dd>
                 </div>
-                <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-left justify-center">
                     <dt class="mb-2 text-3xl font-extrabold">Net Weight</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[1]}</dd>
                 </div>
-                <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-left justify-center">
                     <dt class="mb-2 text-3xl font-extrabold">BAG WEIGHT</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[2]}</dd>
                 </div>
-                <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-left justify-center">
                     <dt class="mb-2 text-3xl font-extrabold">Graded Bags</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[3]}</dd>
                 </div>
-                <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-left justify-center">
                     <dt class="mb-2 text-3xl font-extrabold">Packed Bags</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl"></dd>
                 </div>
-                <div class="flex flex-col items-center justify-center">
+                <div class="flex flex-col items-left justify-center">
                     <dt class="mb-2 text-3xl font-extrabold">Packed Quantity</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl"></dd>
                 </div>
