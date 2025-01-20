@@ -41,11 +41,11 @@ export default function Summary(props){
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[0]}</dd>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">Weight-Bag</dt>
+                    <dt class="mb-2 text-3xl font-extrabold">Net Weight</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[1]}</dd>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl font-extrabold">Net Weight</dt>
+                    <dt class="mb-2 text-3xl font-extrabold">BAG WEIGHT</dt>
                     <dd class="text-gray-500 dark:text-gray-600 font-extrabold text-2xl">{props.summary()[2]}</dd>
                 </div>
                 <div class="flex flex-col items-center justify-center">
