@@ -6,6 +6,7 @@ export default function DashBoard(){
     return(
 <div>
     <Navbar/>
+    <title>Vasundhara Seeds</title>
     <h1 style = {{margin:'200px', font:'status-bar'}}>TODO- Add charts, Sales Data, Revenue Data, Customer and Suppliers Details</h1>
 
 </div>

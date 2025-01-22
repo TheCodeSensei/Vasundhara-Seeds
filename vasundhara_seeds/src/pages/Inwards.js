@@ -12,7 +12,7 @@ const Inwards = () => {
 
 
   const filterable_columns =['DateTime In','Material Name','Supplier Name']
-  const display_Columns = ['SNO','SLIPNO','DateTime In','Net Wt','Material Name','Supplier Name','Bags','Wgt-Bag','NET WEIGHT', 'GRADED BAGS', 'GRADED QUANTITY']
+  const display_Columns = ['SNO','SLIPNO','DateTime In','Net Wt','Material Name','Supplier Name','Bags','Wgt-Bag','NET WEIGHT', 'GRADED BAGS', 'GRADED QUANTITY','GRADED LOOSE']
 
   // Function to read data from Excel file
   const readExcel = () => {
@@ -132,23 +132,18 @@ const Inwards = () => {
   }
   
   function calculate_summary(){
-    const Bags_sum = filteredData.reduce((acc, row) => {
-      const value = parseFloat(row['Bags']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
-      return acc + value;
-    }, 0);
 
     const NetWeight_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['NET WEIGHT']) || 0; // Parse values as numbers, default to 0 if NaN
       // console.log(acc+value)
       return acc + value;
-    }, 0);
+    }, 0).toFixed(2);
 
     const BagWeight_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['Wgt-Bag']) || 0; // Parse values as numbers, default to 0 if NaN
       // console.log(acc+value)
       return acc + value;
-    }, 0);
+    }, 0).toFixed(2);
 
     const GradedBags_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['GRADED BAGS']) || 0; // Parse values as numbers, default to 0 if NaN
@@ -156,8 +151,34 @@ const Inwards = () => {
       return acc + value;
     }, 0);
 
+    const PackedBags_sum = filteredData.reduce((acc, row) => {
+      const value = parseFloat(row['NO OF BAGS']) || 0; // Parse values as numbers, default to 0 if NaN
+      // console.log(acc+value)
+      return acc + value;
+    }, 0);
+
+    const PackedQuantity_sum = filteredData.reduce((acc, row) => {
+      const value = parseFloat(row['Packed quantity']) || 0; // Parse values as numbers, default to 0 if NaN
+      // console.log(acc+value)
+      return acc + value;
+    }, 0);
+
+    const gradedquantity = filteredData.reduce((acc, row) => {
+      const value = parseFloat(row['GRADED QUANTITY']) || 0; // Parse values as numbers, default to 0 if NaN
+      // console.log(acc+value)
+      return acc + value;
+    }, 0);
+
+    const gradedLoose = filteredData.reduce((acc, row) => {
+      const value = parseFloat(row['GRADED LOOSE']) || 0; // Parse values as numbers, default to 0 if NaN
+      // console.log(acc+value)
+      return acc + value;
+    }, 0);
+    console.log(gradedLoose)
+
+
 // console.log(Bags_sum, NetWeight_sum, BagWeight_sum)
-    return [Bags_sum, NetWeight_sum, BagWeight_sum,GradedBags_sum];
+    return [NetWeight_sum, BagWeight_sum,GradedBags_sum, PackedBags_sum, PackedQuantity_sum, gradedquantity+gradedLoose];
   };
 
   return (
@@ -173,7 +194,7 @@ const Inwards = () => {
     <span class="sr-only">Loading...</span>
 </div>
 :
-        <div>
+        <div style={styles.container}>
     <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">INWARDS</span></h1>
 
       
@@ -200,7 +221,7 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
         <select id={key} value={filters[key] || ''}
                 onChange={(e) => handleFilterChange(key, e.target.value)}
                 // disabled={activeFilter && activeFilter !== key} // Disable if another filter is active
-        class="block w-auto p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 relative overflow-auto">
+        >
         <option value="">All</option>
           {(key==="DateTime In")?getUniqueDate().map((date)=>(<option key={date} value = {date}>{date}</option>)):        
           getUniqueValues(key).map((value) => (
@@ -236,11 +257,11 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
           <p>No match found</p>
         ) : (
             <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <table style={styles.table}>
             <thead class="text-xs text-gray-500 uppercase bg-gray-80 dark:bg-gray-900 dark:text-gray-200">
             <tr>
                 {(display_Columns).map((key) => (
-                  <th key={key} class="px-8 py-2">
+                  <th key={key} style={styles.cell}>
                     {key}
                   </th>
                 ))}
@@ -248,11 +269,11 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
             </thead>
             <tbody>
               {filteredData.map((row, index) => (
-                <tr key={index} class="bg-white border-b dark:bg-gray-700 dark:border-gray-400">
+                <tr key={index} style={styles.cell}>
                   {Object.entries(row)
                     .filter(([key]) => display_Columns.includes(key))
                     .map(([key, value], i) => (
-                    <td key={i} class="px-6 py-3">
+                    <td key={i} style={styles.cell}>
                         {value}
                     </td>
                   ))}
@@ -290,6 +311,7 @@ const styles = {
     display: 'flex',
     gap: '10px',
     marginBottom: '10px',
+    marginleft:'10px',
   },
   filter: {
     display: 'flex',
@@ -302,20 +324,22 @@ const styles = {
     fontSize: '14px',
   },
   tableContainer: {
-    overflowX: 'auto',
+    marginleft:'10px',
+    overflow: 'scroll',
+    width: '100%',  
   },
   table: {
-    width: '100%',
+    tableLayout: 'auto',
+    width: 'auto',
     borderCollapse: 'collapse',
+    borderCollapse: 'collapse', // Ensures no double borders
+
   },
-  th: {
-    border: '1px solid #ddd',
+  cell: {
+    whiteSpace: 'nowrap',
     padding: '8px',
-    backgroundColor: '#f2f2f2',
-  },
-  td: {
-    border: '1px solid #ddd',
-    padding: '8px',
+    textAlign: 'left',
+    border: '1px solid #ccc', // Adds vertical and horizontal borders
   },
 };
 
