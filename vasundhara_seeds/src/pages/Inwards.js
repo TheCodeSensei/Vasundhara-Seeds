@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import * as XLSX from 'xlsx';
 import Summary from '../components/Inward_Summary';
 import Navbar from '../components/Navbar';
-
+import '../styles.css'
 const Inwards = () => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState({}); // State to track selected filters for each column
-  // const [activeFilter, setActiveFilter] = React.useState(null); // Track the currently active filter
   const [loading, setLoading]=useState(false);
 
 
@@ -73,26 +72,7 @@ const Inwards = () => {
   const handleFilterChange = (column, value) => {
     setFilters((prevFilters) => {
       const updatedFilters = { ...prevFilters, [column]: value };
-        // If a filter is selected, set it as active
-  // if (value) {
-  //   setActiveFilter(column);
-  // } else {
-  //   setActiveFilter(null); // Clear active filter if no value is selected
-  // }
 
-  
-      // // Filter data based on updated filters
-      // if (column === 'DateTime In') {
-      //   // Filter data based on selected date
-      //   console.log(value)
-      //   const filtered = data.filter((row) =>
-      //       Object.entries(updatedFilters).every(
-      //         ([key, filterValue]) => filterValue === '' || row[key].split(' ')[0] === filterValue
-      //       )
-      //     );
-      //   setFilteredData(filtered);
-      // } else {
-        // console.log(updatedFilters)
       const filtered = data.filter((row) =>
         Object.entries(updatedFilters).every(
           ([key, filterValue]) => {
@@ -135,50 +115,42 @@ const Inwards = () => {
 
     const NetWeight_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['NET WEIGHT']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0).toFixed(2);
 
     const BagWeight_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['Wgt-Bag']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0).toFixed(2);
 
     const GradedBags_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['GRADED BAGS']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0);
 
     const PackedBags_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['NO OF BAGS']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0);
 
     const PackedQuantity_sum = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['Packed quantity']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0);
 
     const gradedquantity = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['GRADED QUANTITY']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0);
 
     const gradedLoose = filteredData.reduce((acc, row) => {
       const value = parseFloat(row['GRADED LOOSE']) || 0; // Parse values as numbers, default to 0 if NaN
-      // console.log(acc+value)
       return acc + value;
     }, 0);
     console.log(gradedLoose)
 
 
-// console.log(Bags_sum, NetWeight_sum, BagWeight_sum)
-    return [NetWeight_sum, BagWeight_sum,GradedBags_sum, PackedBags_sum, PackedQuantity_sum, gradedquantity+gradedLoose];
+    return [NetWeight_sum, BagWeight_sum,GradedBags_sum, PackedBags_sum, PackedQuantity_sum, (gradedquantity+gradedLoose).toFixed(2)];
   };
 
   return (
@@ -195,24 +167,10 @@ const Inwards = () => {
 </div>
 :
         <div style={styles.container}>
-    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">INWARDS</span></h1>
 
       
       {/* Render filters for Date, Material Name, Supplier Name */}
       <div style={styles.filterContainer}>
-      {/* <form class="max-w-sm " margin='0px' >
-          <label htmlFor="Date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black relative overflow-auto">Date</label>
-          <select id="small" value={filters['DateTime In'] || ''}
-  onChange={(e) => handleFilterChange('DateTime In', e.target.value)}
-  // disabled={activeFilter && activeFilter !== "DateTime In"} // Disable if another filter is active
-class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 relative overflow-auto">
-    <option value="">All</option>
-    {
-    getUniqueDate().map((date) => (
-    <option key={date} value={date}>
-    {date}</option>))}
-          </select>
-      </form> */}
       {data.length > 0 &&
         filterable_columns.map((key) => (
             <div key={key} style={styles.filter} class="relative overflow-auto">
@@ -220,7 +178,6 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
         <label htmlFor={key} class="block mb-2 text-sm font-medium text-gray-900 dark:text-black relative overflow-auto">{key}</label>
         <select id={key} value={filters[key] || ''}
                 onChange={(e) => handleFilterChange(key, e.target.value)}
-                // disabled={activeFilter && activeFilter !== key} // Disable if another filter is active
         >
         <option value="">All</option>
           {(key==="DateTime In")?getUniqueDate().map((date)=>(<option key={date} value = {date}>{date}</option>)):        
@@ -230,38 +187,23 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
             </option>))}
         </select>
 </form>
-              {/* <label>{key}</label>
-              <select
-                value={filters[key] || ''}
-                onChange={(e) => handleFilterChange(key, e.target.value)}
-                style={styles.select}
-              >
-                <option value="">All</option>
-                {getUniqueValues(key).map((value) => (
-                  <option key={value} value={value}>
-                    {value}
-                  </option>
-                ))}
-              </select> */}
             </div>
 
         ))}
       <button onClick={reset_filters} type="button"><img src = {process.env.PUBLIC_URL + "/reset.png"}/>Reset</button>
       <button type="button" onClick={reloadinward}><img src ={process.env.PUBLIC_URL + "/tap.png"}/> Reload Inward Data</button><br></br>
-            {/* <label margin="50%">Reload Inward Data</label> */}
       </div>
 
       {/* Display filtered data */}
-      <div style={styles.tableContainer}>
+      <div className='tableContainer'>
         {filteredData.length === 0 ? (
           <p>No match found</p>
         ) : (
-            <div class="relative overflow-x-auto">
             <table style={styles.table}>
             <thead class="text-xs text-gray-500 uppercase bg-gray-80 dark:bg-gray-900 dark:text-gray-200">
             <tr>
                 {(display_Columns).map((key) => (
-                  <th key={key} style={styles.cell}>
+                <th key={key} style={{...styles.cell, position:'sticky', top:0, backgroundColor:"#000", zIndex:10,}}>
                     {key}
                   </th>
                 ))}
@@ -281,14 +223,11 @@ class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounde
               ))}
             </tbody>
           </table>
-          </div>
         )}
       </div>
-      {/* Calculte the summary Fields */}
-      {/* <div>{calculate_summary()}</div> */}
       {/* Summary component */}
       <div>
-        <br></br>        <br></br>        <br></br>      
+        <br></br>
         <Summary summary={calculate_summary}/>
       </div>
       </div>
@@ -324,23 +263,38 @@ const styles = {
     fontSize: '14px',
   },
   tableContainer: {
-    marginleft:'10px',
-    overflow: 'scroll',
-    width: '100%',  
+    marginLeft: '5px',
+    overflowX: 'auto',
+    overflowY: 'auto',
+    maxHeight: '400px', // Adjust this to control vertical scroll area
+    maxWidth: '100%', // Ensures the table doesn't exceed the container width
+    border: '1px solid #ccc', // Optional: adds a border to the container
   },
   table: {
     tableLayout: 'auto',
-    width: 'auto',
+    width: '100%', // Makes the table span the container width
     borderCollapse: 'collapse',
-    borderCollapse: 'collapse', // Ensures no double borders
-
   },
   cell: {
     whiteSpace: 'nowrap',
     padding: '8px',
     textAlign: 'left',
-    border: '1px solid #ccc', // Adds vertical and horizontal borders
+    border: '1px solid #ccc',
+    position: 'fixed',
   },
+  cell: {
+    whiteSpace: 'nowrap',
+    padding: '8px',
+    textAlign: 'left',
+    border: '1px solid #ccc',
+  },
+  header: {
+    position: 'sticky',
+    top: 0,
+    padding: '10px 16px',
+    background: '#555',
+    color: '#f1f1f1',
+  }
 };
 
 export default Inwards;

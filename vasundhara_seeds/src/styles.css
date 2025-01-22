@@ -1,3 +1,39 @@
 .logostyles{
     width :100px;
 }
+
+/* styles.css */
+.tableContainer {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 50vh;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+  }
+  
+  /* Media query for tablets (768px and below) */
+  @media (max-width: 768px) {
+    .tableContainer {
+      max-height: 40vh;
+      margin-left: 5px;
+    }
+    .table th, .table td {
+      font-size: 12px; /* Smaller font for smaller screens */
+      padding: 6px;    /* Reduce padding */
+    }
+  }
+  
+  /* Media query for phones (480px and below) */
+  @media (max-width: 480px) {
+    .tableContainer {
+      max-height: 30vh;
+      margin-left: 2px;
+    }
+    .table th, .table td {
+      font-size: 10px;
+      padding: 4px;
+    }
+  }
+  
+  
