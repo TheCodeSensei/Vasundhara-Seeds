@@ -20,9 +20,9 @@ import Navbar from "./Navbar";
 
 const Dashboard = () => {
   return (
+
     <div style={{ padding: '20px' }}>
-        <Navbar />
-      <h1>Dashboard</h1>
+            <Navbar />
       <div style={{ width: '600px', margin: '0 auto' }}>
         <BarChart />
       </div>

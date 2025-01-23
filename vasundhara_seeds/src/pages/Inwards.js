@@ -94,12 +94,12 @@ const Inwards = () => {
 
   // Function to get unique values for a column
   const getUniqueValues = (column) => {
-    return [...new Set(data.map((row) => row[column]))];
+    return [...new Set(filteredData.map((row) => row[column]))];
   };
 
   const getUniqueDate = ()=>{
     const UniqueDates = new Set(
-        data.map((row)=>row['DateTime In'].split(' ')[0])
+        filteredData.map((row)=>row['DateTime In'].split(' ')[0])
     )
     return Array.from(UniqueDates)
   };

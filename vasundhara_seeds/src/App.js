@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 function App() {
  return(
   <div>
-    <img src={process.env.PUBLIC_URL + '/logo.jpg'} alt = 'Logo' width='200' />
+    {/* <img src={process.env.PUBLIC_URL + '/logo.jpg'} alt = 'Logo' width='200' /> */}
     {/* <Router basename="/Vasundhara-Seeds"> */}
     <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
     {/* <Router> */}

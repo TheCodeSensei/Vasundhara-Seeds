@@ -3,7 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {Link} from 'react-router-dom'
 
 const navigation = [
-  { name: 'Dashboard', to: '/', current: true },
+  { name: 'Dashboard', to: '/', current: false },
   { name: 'Inventory', to: '/inventory', current: false },
   { name: 'Invoices', to: '/invoices', current: false },
   { name: 'Inwards', to: '/inwards', current: false },
@@ -31,8 +31,8 @@ export default function Navbar() {
             <div className="flex shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                src={process.env.PUBLIC_URL + "/logo.jpg"}
+                className="h-10"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
