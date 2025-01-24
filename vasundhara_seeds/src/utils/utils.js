@@ -34,7 +34,7 @@ export default async function readExcel() {
           }, {})
       );
 
-      console.log('Processed data:', jsonData); // Debug log
+      // console.log('Processed data:', jsonData); // Debug log
       return jsonData; // Return the processed data
     } else {
       console.warn('No rows found in the sheet!');

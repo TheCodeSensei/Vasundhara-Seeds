@@ -7,6 +7,7 @@ import Invoices from './components/Invoices';
 import Footer from './components/Footer';
 import readExcel from './utils/utils.js'
 import { useEffect, useState } from 'react';
+import './styles.css'
 
 function App() {
   const [data, setData]=useState([]);
@@ -14,10 +15,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const jsonData = await readExcel(); // Wait for the data to be read
-      console.log('App data',jsonData)
+      // console.log('App data',jsonData)
 
       setData(jsonData); // Set the data
-      // setFilteredData(jsonData); // Initialize filtered data with full data set
       const interval = setInterval(readExcel, 5 * 60* 60 * 1000); // 5 hour interval
      return () => clearInterval(interval); // Clean up interval on component unmount
     };
@@ -27,18 +27,14 @@ function App() {
 
  return(
   <div>
-    {/* <img src={process.env.PUBLIC_URL + '/logo.jpg'} alt = 'Logo' width='200' /> */}
-    {/* <Router basename="/Vasundhara-Seeds"> */}
     <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
     {/* <Router> */}
       <Routes>
-        <Route path = '/' element ={<DashBoard />}/>
+        <Route path = '/' element={data.length > 0 ? <Inwards data={data} /> : <div className='loader-container'><div className='loader'></div></div>}/>
         <Route path = '/inventory' element ={<Inventory />}/>
         <Route path = '/invoices' element ={<Invoices />}/>
-        <Route
-          path='/inwards'
-          element={data.length > 0 ? <Inwards data={data} /> : <p>Loading...</p>}
-        />        </Routes>
+        <Route path='/Dashboard' element={<DashBoard/>}/>   
+      </Routes>
       {/* </Router> */}
       </BrowserRouter>
       <Footer />

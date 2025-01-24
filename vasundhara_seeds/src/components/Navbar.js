@@ -3,10 +3,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {Link} from 'react-router-dom'
 
 const navigation = [
-  { name: 'Dashboard', to: '/', current: false },
+  { name: 'Inwards', to: '/', current: false },
   { name: 'Inventory', to: '/inventory', current: false },
   { name: 'Invoices', to: '/invoices', current: false },
-  { name: 'Inwards', to: '/inwards', current: false },
+  { name: 'Dashboard', to: '/Dashboard', current: false },
 ]
 
 function classNames(...classes) {
@@ -131,14 +131,3 @@ export default function Navbar() {
     </Disclosure>
   )
 }
-// import React from 'react'
-// import {Link} from 'react-router-dom'
-// export default function Navbar(){
-//     return(
-//         <div><h1>TEST</h1>
-//          <Link to='/inwards'>
-//             <button>Inwards</button>
-//         </Link>
-//         </div>
-//     )
-// }
