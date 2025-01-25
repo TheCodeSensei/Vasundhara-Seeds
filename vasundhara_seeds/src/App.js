@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import readExcel from './utils/utils.js'
 import { useEffect, useState } from 'react';
 import './styles.css'
+import LabourData from './components/LabourData.js';
 
 function App() {
   const [data, setData]=useState([]);
@@ -31,6 +32,7 @@ function App() {
     {/* <Router> */}
       <Routes>
         <Route path = '/' element={data.length > 0 ? <Inwards data={data} /> : <div className='loader-container'><div className='loader'></div></div>}/>
+        <Route path ='/labourdata' element = {<LabourData/>}></Route>
         <Route path = '/inventory' element ={<Inventory />}/>
         <Route path = '/invoices' element ={<Invoices />}/>
         <Route path='/Dashboard' element={<DashBoard/>}/>   

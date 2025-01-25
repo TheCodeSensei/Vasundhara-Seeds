@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 const navigation = [
   { name: 'Inwards', to: '/', current: false },
+  { name: 'LabourData', to: '/labourdata', current: false },
   { name: 'Inventory', to: '/inventory', current: false },
   { name: 'Invoices', to: '/invoices', current: false },
   { name: 'Dashboard', to: '/Dashboard', current: false },

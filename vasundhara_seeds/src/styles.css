@@ -60,3 +60,119 @@
   }
   
   
+
+  /* Global Styles */
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for form elements */
+.div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+/* Navbar Styling */
+.Navbar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Label Styling */
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Dropdown styling */
+.select {
+  width: 50%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Option Styling */
+.option {
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Paragraph Styling */
+.p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Input field styling for adding new farmer/activity */
+.input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Button styling */
+.button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Spacing between form elements */
+.form {
+  margin-bottom: 20px;
+}
+
+/* Styling for form submission buttons */
+.button[type="submit"] {
+  width: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .div {
+    padding: 15px;
+  }
+  .input, select, button {
+    font-size: 14px;
+  }
+}
