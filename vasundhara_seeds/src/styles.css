@@ -1,5 +1,5 @@
 .logostyles{
-    width :100px;
+    width :200px;
 }
 
 /* styles.css */
@@ -175,4 +175,11 @@
   .input, select, button {
     font-size: 14px;
   }
+}
+
+.goldenline {
+  border: none;
+  height: '3px';
+  background: linear-gradient(to right, #FFD700, #FFB700, #FFD700);
+  margin: '15px' 0;
 }
