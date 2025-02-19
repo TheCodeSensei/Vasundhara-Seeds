@@ -12,21 +12,21 @@ export default function About(){
         { 
           name: "Mr. Pradeep Khadikar", 
           role: "Founder and Owner", 
-          image: "/Pradeep.jpg", 
+          image: "/Pradeep.JPG", 
           bio: "With 27 years of extensive experience in the seed industry, Mr. Pradeep Khadikar possesses deep expertise in seed technology and market dynamics. Known for his humility and relationship-building skills, he fosters long-lasting partnerships that drive the company’s growth and success.", 
           social: { linkedin: "#", twitter: "#" }
         },
         { 
           name: "Mr. Sarang Khadikar", 
           role: "Head of Finance & Business Development", 
-          image: "/Sarang.jpg", 
+          image: "/Sarang.JPG", 
           bio: "Bringing 12 years of industry experience and an MBA from the prestigious National Institute of Agricultural Extension Management (MANAGE), Hyderabad, Mr. Sarang Khadikar leads the company’s financial strategy and business development initiatives. His strategic vision ensures sustainable growth and market expansion.", 
           social: { linkedin: "#", twitter: "#" }
         },
         { 
           name: "Mr. Prabhanjan Gokhale", 
           role: "Chief Operating Officer(COO)", 
-          image: "/Prabhanjan.jpg", 
+          image: "/Prabhanjan.JPG", 
           bio: "With 12 years of experience in retail management, including leadership roles at reputed companies like TATA, Mr. Prabhanjan Gokhale oversees the company’s operations and systems. His expertise in streamlining processes and optimizing efficiency makes him the backbone of the organization.", 
           social: { linkedin: "#", twitter: "#" }
         },

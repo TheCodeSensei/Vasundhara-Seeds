@@ -7,11 +7,11 @@ import "swiper/css/effect-fade";
 
 export default function Infrastructure(){
 
-    const hero_section = [{image:'/infra1.jpg'},
-        {image:'/infra2.jpg'},
-        {image:'/infra3.jpg'},
-        {image:'/infra5.jpg'},
-        {image:'/infra6.jpg'}
+    const hero_section = [{image:'/infra1.JPG'},
+        {image:'/infra2.JPG'},
+        {image:'/infra3.JPG'},
+        {image:'/infra5.JPG'},
+        {image:'/infra6.JPG'}
     ]
     return(
         
@@ -20,7 +20,7 @@ export default function Infrastructure(){
   {/* ✅ Hero Image with Overlay */}
   <div 
     className="w-full h-full bg-cover bg-center flex items-end justify-start text-white p-8 relative"
-    style={{ backgroundImage: `url('/Infra5.jpg')` }}
+    style={{ backgroundImage: `url('/Infra5.JPG')` }}
   >
     {/* Overlay with Smooth Transition */}
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 transition-opacity duration-500 ease-in-out opacity-0 hover:opacity-40"></div>
