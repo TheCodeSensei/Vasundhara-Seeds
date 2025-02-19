@@ -20,7 +20,7 @@ export default function Infrastructure(){
   {/* ✅ Hero Image with Overlay */}
   <div 
     className="w-full h-full bg-cover bg-center flex items-end justify-start text-white p-8 relative"
-    style={{ backgroundImage: `url('/Infra5.JPG')` }}
+    style={{ backgroundImage: `url('/infra5.JPG')` }}
   >
     {/* Overlay with Smooth Transition */}
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 transition-opacity duration-500 ease-in-out opacity-0 hover:opacity-40"></div>
