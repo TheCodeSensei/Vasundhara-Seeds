@@ -10,8 +10,16 @@ import { useEffect, useState } from 'react';
 import './styles.css'
 import LabourData from './components/LabourData.js';
 import AnimatedCalculation from './components/animate.js';
-import LandingPage from './components/LandingPage.js';
+import Home from './components/Home.js';
 import MainPage from './components/MainPage.js';
+import About from './components/About.js';
+import Navbar from './components/Navbar.js';
+import Infrastructure from './components/Infrastructure.js';
+import Breadcrumb from './components/BreadCrumbs.js';
+import ScrollToTop from './components/scrollToTop.js';
+import ContactUs from './components/Contact.js';
+import Products from './components/products.js';
+
 
 function App() {
   // const [data, setData]=useState([]);
@@ -31,19 +39,24 @@ function App() {
 
  return(
   <div>
-    <LandingPage/>
-    {/* <BrowserRouter basename={process.env.PUBLIC_URL || "/"}> */}
-    {/* <Router> */}
-      {/* <Routes> */}
-        {/* <Route path = '/' element={data.length > 0 ? <Inwards data={data} /> : <div className='loader-container'><div className='loader'></div></div>}/> */}
-        {/* <Route path ='/labourdata' element = {<LabourData/>}></Route> */}
-        {/* <Route path = '/inventory' element ={<Inventory />}/> */}
-        {/* <Route path = '/invoices' element ={<Invoices />}/> */}
-        {/* <Route path='/Dashboard' element={<DashBoard/>}/>    */}
-      {/* </Routes> */}
-      {/* </Router> */}
-      {/* </BrowserRouter> */}
-      {/* <Footer /> */}
+    <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
+    <ScrollToTop/>
+    <Navbar/>
+    <div className="content">
+
+       <Routes>
+        <Route path ='/about' element = {<About/>}></Route>
+        <Route path = '/' element ={<Home/>}></Route>
+        <Route path = '/home' element ={<Home/>}></Route>
+        <Route path = '/infrastructure' element ={<Infrastructure/>}></Route>
+        <Route path = '/contact' element ={<ContactUs/>}></Route>
+        <Route path = '/products' element ={<Products/>}></Route>
+
+      </Routes>
+      </div>
+      <Footer />
+      </BrowserRouter>
+      
   </div>
 
  );
