@@ -59,7 +59,7 @@ export default function About(){
 <Breadcrumb />
 
       {/* About Section */}
-      <section class="p-6 md:p-10 bg-white" style ={{backgroundImage:`url('/Home.png')`}}>
+      <section class="p-6 md:p-10 bg-white" style ={{backgroundImage:`url('/Home3.png')`}}>
   <div class="container mx-auto">
     {/* <!-- Main About Section --> */}
     <div class="flex flex-col md:flex-row items-center md:items-start justify-normal text-left md:text-left">
@@ -102,38 +102,53 @@ Today, we continue to empower farmers with superior-quality seeds, staying commi
   </div>
 </section>
 
+          {/* Mission and Vision */}
+          <section className='hidden lg:block h-screen bg-cover bg-center' style={{backgroundImage:`url('/Home4.png')`}}>
+      <div></div>
+      </section>
 
-<section className="bg-gray-100 py-12 px-6">
-      {/* Team Section */}
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Meet Our Team</h2>
-        <p className="text-gray-600 mb-6">Dedicated professionals behind our success</p>
-        
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
-          {teamMembers.map((member, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl shadow-md cursor-pointer border-2 border-yellow-500"
-              onClick={() => setSelectedMember(selectedMember === index ? null : index)}
-            >
-              <img src={member.image} alt={member.name} className="rounded-3xl" />
-              <h3 className="text-lg font-semibold bg-green-700 text-white border-2 border-yellow-500">{member.name}<p className='text-sm'>{member.role}</p></h3>
-              {/* <p className="text-black bg-green-700">{member.role}</p> */}
-              
-              {/* Expandable Section */}
-              {selectedMember === index && (
-                <div className="mt-4 text-gray-700 text-sm bg-gray-50 p-3 rounded-lg shadow-inner">
-                  <p><strong>Bio:</strong> {member.bio}</p>
-                  <div className="flex justify-center mt-2 space-x-3">
-                    <a href={member.social.linkedin} className="text-blue-600 hover:underline">LinkedIn</a>
-                    <a href={member.social.twitter} className="text-blue-400 hover:underline">Twitter</a>
-                  </div>
-                </div>
-              )}
+
+      <section className="bg-gray-100 py-12 px-6">
+  {/* Team Section */}
+  <div className="container mx-auto text-center">
+    <h2 className="text-3xl font-bold text-gray-800">Meet Our Team</h2>
+    <p className="text-gray-600 mb-6">Dedicated professionals behind our success</p>
+
+    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+      {teamMembers.map((member, index) => (
+        <div 
+          key={index} 
+          className="bg-white rounded-xl shadow-md cursor-pointer border-2 border-yellow-500 p-4"
+          onClick={() => setSelectedMember(selectedMember === index ? null : index)}
+        >
+          <img src={member.image} alt={member.name} className="rounded-3xl w-full h-40 object-cover" />
+          <h3 className="text-lg font-semibold bg-green-700 text-white border-2 border-yellow-500 p-2 rounded-md">
+            {member.name}
+            <p className="text-sm">{member.role}</p>
+          </h3>
+
+          {/* Read More Animation */}
+          <p 
+            className={`text-green-900 font-semibold mt-2 text-sm cursor-pointer 
+            ${selectedMember === index ? 'hidden' : 'animate-bounce'}`}
+          >
+            Read More ↓
+          </p>
+
+          {/* Expandable Section */}
+          {selectedMember === index && (
+            <div className="mt-4 text-gray-700 text-sm bg-gray-50 p-3 rounded-lg shadow-inner">
+              <p><strong>Bio:</strong> {member.bio}</p>
+              <div className="flex justify-center mt-2 space-x-3">
+                <a href={member.social.linkedin} className="text-blue-600 hover:underline">LinkedIn</a>
+                <a href={member.social.twitter} className="text-blue-400 hover:underline">Twitter</a>
+              </div>
             </div>
-          ))}
+          )}
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
 
       {/* Certifications Section */}
       <div className="container mx-auto text-center mt-12">

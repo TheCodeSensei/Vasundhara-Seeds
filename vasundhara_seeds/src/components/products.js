@@ -23,7 +23,7 @@ export default function Products(){
 <Breadcrumb/>
 
         {/* Products Section */}
-        <section id="products" className="py-20" style = {{backgroundImage:`url('/Home3.png')`}}>
+        <section id="products" className="py-20">
   <div className="container mx-auto px-6">
     <h2 className="text-3xl font-bold text-left mb-8 text-white">Our Products</h2>
 

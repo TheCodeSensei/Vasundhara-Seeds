@@ -16,7 +16,7 @@ import About from './components/About.js';
 import Navbar from './components/Navbar.js';
 import Infrastructure from './components/Infrastructure.js';
 import Breadcrumb from './components/BreadCrumbs.js';
-import ScrollToTop from './components/scrollToTop.js';
+import ScrollToTop from './utils/scrollToTop.js';
 import ContactUs from './components/Contact.js';
 import Products from './components/products.js';
 

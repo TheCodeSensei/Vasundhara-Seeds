@@ -47,7 +47,10 @@ export default function ContactUs() {
           <FaMapMarkerAlt className="text-red-500 text-4xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold">Location</h3>
           <p className="mt-2 mb-4 text-white">53 D Badi Udyogpuri, Ujjain, MP</p>
-          <div className="w-full h-40 rounded-lg overflow-hidden">
+          
+        </div>
+      </div>
+      <div className="w-full h-40 rounded-lg overflow-hidden">
             <iframe
               title="Google Map"
               className="w-full h-full"
@@ -57,8 +60,6 @@ export default function ContactUs() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-        </div>
-      </div>
 
       <div className="text-center mt-8">
   <a
