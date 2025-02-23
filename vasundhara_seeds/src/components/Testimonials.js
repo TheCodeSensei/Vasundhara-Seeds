@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12 px-6" style = {{backgroundImage:`url('/Home3.png')`}}>
+    <section className="bg-gray-100 py-12 px-6" style = {{backgroundImage:`url('/home3.png')`}}>
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800">Testimonials</h2>
         <p className="text-gray-600 mb-8">Hear from our satisfied customers</p>
