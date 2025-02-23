@@ -45,7 +45,7 @@ export default function ContactUs() {
         {/* Location Card with Google Map */}
         <div className="bg-green-900 shadow-lg rounded-xl p-6 text-center border border-gray-200">
           <FaMapMarkerAlt className="text-red-500 text-4xl mx-auto mb-4" />
-          <h3 className="text-xl font-semibold">Location</h3>
+          <h3 className="text-xl font-semibold text-white">Location</h3>
           <p className="mt-2 mb-4 text-white">53 D Badi Udyogpuri, Ujjain, MP</p>
           
         </div>
@@ -78,17 +78,17 @@ export default function ContactUs() {
         {/* <!-- Social Media --> */}
         <div className="text-center mt-8 py-10 text-green-700">
                     <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-                    <div className="inline-flex items-center">
-                        <a href="https://m.facebook.com/Vasundharaseedsujjain/" className="bg-white text-green-900 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
+                    <div className="inline-flex items-center gap-8">
+                        <a href="https://m.facebook.com/Vasundharaseedsujjain/" className="bg-green-900 text-yellow-400 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-                        <a className="bg-white text-green-900 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
+                        <a className="bg-green-900 text-yellow-400 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                        <a className="bg-white text-green-900 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
+                        <a className="bg-green-900 text-yellow-400 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
                             <FontAwesomeIcon icon={faTwitter} />
                         </a>
-                        <a href="https://youtube.com/@sarangmanage10?si=qEai_gMTGyKLr3xi" className="bg-white text-green-900 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
+                        <a href="https://youtube.com/@sarangmanage10?si=qEai_gMTGyKLr3xi" className="bg-green-900 text-yellow-400 hover:bg-green-700 hover:text-white transition w-12 h-12 flex items-center justify-center rounded-full text-2xl">
                             <FontAwesomeIcon icon={faYoutube} />
                         </a>
                     </div>

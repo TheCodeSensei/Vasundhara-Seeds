@@ -13,7 +13,7 @@ const Footer = () => {
         
         {/* <!-- Logo & About --> */}
         <div>
-          <img src = '/logo.jpg' className='h-[50px] cursor-pointer'onClick={()=>window.location.href='/'}/><br></br>
+          <img src = '/logo_hindi.jpeg' className='h-[50px] cursor-pointer'onClick={()=>window.location.href='/'}/><br></br>
             <p class="text-gray-300 text-sm">
                 Bringing you the best services with a commitment to excellence and sustainability.
             </p>

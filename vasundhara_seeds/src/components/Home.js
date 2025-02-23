@@ -30,18 +30,18 @@ const Home = () => {
         className="w-full h-screen bg-cover bg-center bg-black bg-opacity-20 flex flex-col justify-center items-center text-center text-gray-50" 
         style={{ backgroundImage: `url('/field.jpg')` }}
       >
-        <h1 className="text-4xl md:text-4xl font-bold mb-4">
+        <h1 className="text-4xl md:text-4xl font-bold mb-4 text-center">
         Welcome to Vasundhara Seeds</h1>
         <p className="text-lg md:text-xl ">Your trusted partner in agricultural excellence</p><br></br>
         <button
   onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
   className=" px-6 py-2 rounded-full border-2 border-yellow-500 animate-bounce font-bold text-white"
 >  {/* Overlay Icon */}
-  <img 
+  {/* <img 
     src="/Home.png" 
     alt="icon" 
     className="absolute -top-2 -right-3 w-9 h-9 rounded-full"
-  />
+  /> */}
   Explore Products</button>
         </div>
         
@@ -66,11 +66,11 @@ const Home = () => {
   className="px-6 py-2 border-2 border-yellow-500 animate-bounce font-bold text-white rounded-full"
 >
   {/* Overlay Icon */}
-  <img 
+  {/* <img 
     src="/Home.png" 
     alt="icon" 
     className="absolute -top-2 -right-3 w-9 h-9 rounded-full"
-  />
+  /> */}
     Explore Products
 </button>
           </div>
@@ -103,18 +103,18 @@ We cater to all key crop segments and are trusted by farmers across the nation.
 
     {/* <!-- Stats Section --> */}
     <div class="mt-8 text-center">
-      <h3 class="text-xl md:text-2xl font-semibold inline-block border-b-2 border-yellow-900 pb-1 text-green-900 ">Vasudhara at Glance</h3>
+      <h3 class="text-xl md:text-2xl font-semibold inline-block border-b-2 border-yellow-900 pb-1 text-green-900 ">Vasundhara at Glance</h3>
       <div class=" mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="border-2 border-yellow-500 p-4 bg-white shadow rounded-lg">
-          <h4 class="text-2xl font-bold text-green-900">500+</h4>
+          <h4 class="text-2xl font-bold text-green-900">40000+</h4>
           <p class="text-gray-600">Satisfied Farmers</p>
         </div>
         <div class="p-4 bg-white shadow rounded-lg border-2 border-yellow-500">
-          <h4 class="text-2xl font-bold text-green-900">100+</h4>
+          <h4 class="text-2xl font-bold text-green-900">20+</h4>
           <p class="text-gray-600">Quality Products</p>
         </div>
         <div class="p-4 bg-white shadow rounded-lg border-2 border-yellow-500">
-          <h4 class="text-2xl font-bold text-green-900">20+</h4>
+          <h4 class="text-2xl font-bold text-green-900">25+</h4>
           <p class="text-gray-600">Years Experience</p>
         </div>
       </div>
@@ -134,7 +134,7 @@ We cater to all key crop segments and are trusted by farmers across the nation.
     <div className="border-4 border-yellow-500 mb-12 bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center">
   {/* Image Section */}
   <img
-    src="/Latest.JPG"
+    src="/product2.JPG"
     alt="Latest Researched Product"
     className="w-full md:w-1/2 h-60 object-cover rounded-lg mb-4 md:mb-0 md:mr-6"
   />
@@ -151,13 +151,13 @@ We cater to all key crop segments and are trusted by farmers across the nation.
 
     {/* Button aligned to the right */}
 
-    <div className="flex justify-end relative">
+    <div className="flex justify-end relative py-4">
         <button className="px-6 py-2 rounded-full  border-2 border-yellow-500 animate-bounce font-bold text-black ">
-        <img 
+        {/* <img 
     src="/Home.png" 
     alt="icon" 
-    className="absolute -top-2 -right-3 w-9 h-9"
-  />
+    className="absolute -top-2 -right-3 w-11 h-11"
+  /> */}
     Explore Products
         </button>
     </div>
@@ -170,27 +170,27 @@ We cater to all key crop segments and are trusted by farmers across the nation.
     {/* Existing Products Grid */}
 
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-2">
       {[
         'Research Wheat Seeds',
         'Notified Soyabean Seeds',
         'Research Black Gram Seeds',
       ].map((product, index) => (
         <div key={index} className="flex flex-wrap justify-between items-center bg-white p-6 rounded-lg shadow-md border-4 border-yellow-500">
-          <img src="/product.webp" alt={product} className="w-full h-40 object-cover mb-4 rounded-full" />
+          <img src="/pack.JPG" alt={product} className="w-full h-60 object-cover mb-4 rounded-full" />
           <div className="flex flex-col w-full">
 
           <h3 className="text-xl font-bold mb-2">{product}</h3>
           <p className="text-gray-600">High-quality seeds for maximum yield and reliability.</p>
           <Link to="/products">
-          <div className="flex justify-end relative">
+          <div className="flex justify-end relative py-4">
   <button className="px-6 py-2 rounded-full border-2 border-yellow-500 font-bold text-black relative animate-bounce">
       {/* Overlay Icon */}
-  <img 
+  {/* <img 
     src="/Home.png" 
     alt="icon" 
     className="absolute -top-2 -right-3 w-9 h-9"
-  />
+  /> */}
     Explore Products
   </button>
   

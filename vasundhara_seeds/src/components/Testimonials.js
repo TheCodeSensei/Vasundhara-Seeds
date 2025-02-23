@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
   return (
     <section className="bg-gray-100 py-12 px-6" style = {{backgroundImage:`url('/Home3.png')`}}>
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Testmonials</h2>
+        <h2 className="text-3xl font-bold text-gray-800">Testimonials</h2>
         <p className="text-gray-600 mb-8">Hear from our satisfied customers</p>
 
         <div className="relative flex justify-center items-center">
@@ -71,16 +71,16 @@ const TestimonialsSection = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.5 }}
-            className=" p-6 rounded-xl shadow-lg max-w-lg mx-6 text-center bg-lime-600"
+            className=" p-6 rounded-xl shadow-lg max-w-lg mx-6 text-center bg-green-800"
           >
             <img
               src={testimonials[currentIndex].image}
               alt={testimonials[currentIndex].name}
               className="w-16 h-16 rounded-full mx-auto mb-3"
             />
-            <p className="text-gray-700 italic">"{testimonials[currentIndex].feedback}"</p>
+            <p className="text-white font-semibold italic">"{testimonials[currentIndex].feedback}"</p>
             <h3 className="mt-4 text-lg font-semibold">{testimonials[currentIndex].name}</h3>
-            <p className="text-gray-500 text-sm">{testimonials[currentIndex].role}</p>
+            <p className=" text-sm">{testimonials[currentIndex].role}</p>
           </motion.div>
 
           {/* Right Button */}
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? "bg-blue-500" : "bg-gray-300"
+                currentIndex === index ? "bg-green-500" : "bg-gray-300"
               } transition-all`}
             />
           ))}

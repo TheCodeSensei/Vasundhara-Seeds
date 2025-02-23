@@ -32,7 +32,7 @@ export default function Products(){
     {/* Latest Researched Product */}
     <div className="border-4 border-yellow-500 mb-12 bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center">
       <img
-        src="/Latest.JPG"
+        src="/product2.JPG"
         alt="Latest Researched Product"
         className="w-full md:w-1/2 h-60 object-cover rounded-lg mb-4 md:mb-0 md:mr-6"
       />

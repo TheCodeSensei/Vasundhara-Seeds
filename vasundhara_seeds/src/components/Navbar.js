@@ -11,7 +11,7 @@ export default function Navbar() {
           {/* Navbar */}
             <header className=" bg-white text-black p-4 md:h-20 lg:h-20 fixed top-0 left-0 w-full z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <img src ='/logo.jpg' className='cursor-pointer w-48' onClick={() => window.location.href = "/"} />
+          <img src ='/logo_hindi.jpeg' className='cursor-pointer w-48' onClick={() => window.location.href = "/"} />
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-700 focus:outline-none"
@@ -40,11 +40,13 @@ export default function Navbar() {
           } md:flex md:items-center`}
         >
           <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-5 md:p-0">
-            {["Home", "About", "Infrastructure", "Products", "Contact"].map((item, index) => (
+            {["Home", "About-Us", "Infrastructure", "Products", "Contact"].map((item, index) => (
+                              <Link key = {index} to={`/${item.toLowerCase()}`} className="text-black hover:text-blue-600 transition-all font-semibold tracking-wide font-serif text-sm" onClick={()=>setIsMenuOpen(false)}>
               <li key={index} className="border-b md:border-0 pb-2 md:pb-0">
-                <Link key = {index} to={`/${item.toLowerCase()}`} className="text-black hover:text-blue-600 transition-all font-semibold tracking-wide font-serif text-sm" onClick={()=>setIsMenuOpen(false)}>{item}
-                </Link>
+{item}
+
              </li>
+             </Link>
             ))}
           </ul>
         </nav>

@@ -46,9 +46,9 @@ export default function Infrastructure(){
       {/* <!-- Right Side (Description) --> */}
       <div>
         <h1 className="text-green-700 font-serif text-lg font-extrabold">Our Infrastructure</h1>
-        <p className=" text-sm font-serif">We take pride in our state-of-the-art processing plant**, equipped with the latest John Fowler Westrup** technology from Denmark. Our **5-ton-per-hour grading plant**  advanced **gravity separators, a magnetic system for soil particle removal,** and a **9-spiral separator system** designed specifically for superior **soybean grading**.  
+        <p className=" text-sm font-serif">We take pride in our state-of-the-art processing plant, equipped with the latest John Fowler Westrup technology from Denmark. Our 5-ton-per-hour grading plant  advanced gravity separators, a magnetic system for soil particle removal, and a 9-spiral separator system designed specifically for superior soybean grading.  
 
-To ensure optimal storage conditions, we have built a **modern warehouse spanning half an acre**, featuring a **best-in-class shed** with **heat-dampening materials** to minimize moisture loss and preserve seed quality. Our infrastructure is designed to maintain the highest standards of seed purity, consistency, and longevity.  
+To ensure optimal storage conditions, we have built a modern warehouse spanning half an acre, featuring a best-in-class shed with heat-dampening materials to minimize moisture loss and preserve seed quality. Our infrastructure is designed to maintain the highest standards of seed purity, consistency, and longevity.  
 </p>
       </div>
     </div>
@@ -80,7 +80,7 @@ To ensure optimal storage conditions, we have built a **modern warehouse spannin
 
 {/* Hero Section */}
 
-<div className="w-full h-[80vh] md:h-[70vh] lg:h-[60vh] relative overflow-hidden py-10">
+<div className="w-full h-[80vh] md:h-[70vh] lg:h-[100vh] relative overflow-hidden py-10">
   <Swiper
     modules={[Autoplay, EffectFade]}
     effect="fade"
