@@ -83,15 +83,15 @@ To bridge this gap, we established our own seed production unit, starting with a
     <div class="mt-8 text-center">
       <h3 class="text-xl md:text-2xl font-semibold inline-block border-b-2 border-yellow-900 pb-1 text-green-900 ">Vasundhara at Glance</h3>
       <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-4 bg-white shadow rounded-lg border border-green-800">
+        <div class="p-4 bg-white shadow rounded-lg border-2 border-yellow-500">
           <h4 class="text-2xl font-bold text-green-900">40000+</h4>
           <p class="text-gray-600">Satisfied Farmers</p>
         </div>
-        <div class="p-4 bg-white shadow rounded-lg border border-green-800">
+        <div class="p-4 bg-white shadow rounded-lg border-2 border-yellow-500">
           <h4 class="text-2xl font-bold text-green-900">20+</h4>
           <p class="text-gray-600">Quality Products</p>
         </div>
-        <div class="p-4 bg-white shadow rounded-lg border border-green-800">
+        <div class="p-4 bg-white shadow rounded-lg border-2 border-yellow-500">
           <h4 class="text-2xl font-bold text-green-900">25+</h4>
           <p class="text-gray-600">Years Experience</p>
         </div>
@@ -101,7 +101,7 @@ To bridge this gap, we established our own seed production unit, starting with a
 </section>
 
           {/* Mission and Vision */}
-          <section className='hidden lg:block h-screen bg-cover bg-center bg-green-800' style={{backgroundImage:`url('/Home4.png')`}}>
+          <section className='hidden lg:block h-screen bg-cover bg-center bg-green-800' style={{backgroundImage:`url('/mission_vision.png')`}}>
       <div></div>
       </section>
 
@@ -148,7 +148,7 @@ To bridge this gap, we established our own seed production unit, starting with a
     </div>
   </div>
 
-      {/* Certifications Section */}
+      {/* Awards and Certification Section */}
       <div className="container mx-auto text-center mt-12">
         <h2 className="text-3xl font-bold text-gray-800">Awards</h2>
         <p className="text-gray-600 mb-6">Prestigious Pride of Ujjain award by Madhya Pradesh Chief Minister Mohan Yadav </p>
@@ -157,7 +157,7 @@ To bridge this gap, we established our own seed production unit, starting with a
           {certifications.map((cert, index) => (
             <div key={index} className="bg-white p-4 rounded-xl shadow-md">
               <img src={cert.image} alt={cert.name} className="w-full h-full mx-auto object-contain" />
-              <p className="text-gray-700 font-bold mt-2">{cert.name}</p>
+              {/* <p className="text-gray-700 font-bold mt-2">{cert.name}</p> */}
             </div>
           ))}
         </div>

@@ -34,7 +34,7 @@ export default function Infrastructure(){
 <Breadcrumb />
 
       {/* Infra Details Section */}
-      <section class=" p-6 bg-white" style ={{backgroundImage:`url('/Home3.png')`}}>
+      <section class=" py-12 px-6 bg-white">
   <div class="container mx-auto">
     {/* <!-- Main About Section --> */}
     <div class="flex flex-col md:flex-row items-center md:items-start justify-normal text-left md:text-left">

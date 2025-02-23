@@ -7,7 +7,7 @@ import Breadcrumb from "./BreadCrumbs";
 export default function ContactUs() {
   return (
     <div >
-        <section className="relative bg-cover bg-center h-[500px] pt-20">
+        <section className="relative bg-cover bg-center h-[400px] pt-20">
   {/* ✅ Hero Image with Overlay */}
   <div 
     className="w-full h-full bg-cover bg-center flex items-end justify-start text-white p-8 relative"

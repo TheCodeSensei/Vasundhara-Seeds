@@ -11,7 +11,8 @@ export default function Navbar() {
           {/* Navbar */}
             <header className=" bg-white text-black p-4 md:h-20 lg:h-20 fixed top-0 left-0 w-full z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <img src ='/logo_hindi.jpeg' className='cursor-pointer w-48' onClick={() => window.location.href = "/"} />
+          <img src ='/logo_hindi.jpeg' className='cursor-pointer w-52 h-full
+          ' onClick={() => window.location.href = "/"} />
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-700 focus:outline-none"

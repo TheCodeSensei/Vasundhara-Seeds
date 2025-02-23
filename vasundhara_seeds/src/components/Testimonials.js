@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
               alt={testimonials[currentIndex].name}
               className="w-16 h-16 rounded-full mx-auto mb-3"
             />
-            <p className="text-white font-semibold italic">"{testimonials[currentIndex].feedback}"</p>
+            <p className="text-white font-semibold italic text-lg">"{testimonials[currentIndex].feedback}"</p>
             <h3 className="mt-4 text-lg font-semibold">{testimonials[currentIndex].name}</h3>
             <p className=" text-sm">{testimonials[currentIndex].role}</p>
           </motion.div>

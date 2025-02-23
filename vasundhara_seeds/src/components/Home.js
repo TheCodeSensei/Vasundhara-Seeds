@@ -35,7 +35,7 @@ const Home = () => {
         <p className="text-lg md:text-xl ">Your trusted partner in agricultural excellence</p><br></br>
         <button
   onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
-  className=" px-6 py-2 rounded-full border-2 border-yellow-500 animate-bounce font-bold text-white"
+  className=" px-6 py-2 rounded-full border-2 border-yellow-500 animate-bounce font-bold text-white bg-"
 >  {/* Overlay Icon */}
   {/* <img 
     src="/Home.png" 
