@@ -119,7 +119,7 @@ To bridge this gap, we established our own seed production unit, starting with a
           className="bg-white rounded-xl shadow-md cursor-pointer border-2 border-yellow-500 p-4"
           onClick={() => setSelectedMember(selectedMember === index ? null : index)}
         >
-          <img src={member.image} alt={member.name} className="rounded-3xl w-full h-40 object-cover" />
+          <img src={member.image} alt={member.name} className="rounded-3xl w-full h-80 object-cover" />
           <h3 className="text-lg font-semibold bg-green-700 text-white border-2 border-yellow-500 p-2 rounded-md">
             {member.name}
             <p className="text-sm">{member.role}</p>
