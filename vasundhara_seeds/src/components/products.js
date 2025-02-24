@@ -16,7 +16,7 @@ export default function Products(){
     {
       name: "Soybean Seeds",
       varieties: ["JS-9569", "RVSM 11-35","RVS 2002-4","JS 20-34"],
-      image:"/soyabean.jpg"
+      image:"/soyabean.JPG"
     },
     {
       name: "Black Gram Seeds",
