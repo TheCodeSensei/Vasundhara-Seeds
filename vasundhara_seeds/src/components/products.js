@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Breadcrumb from "./BreadCrumbs";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Icons for toggle
+import { Link } from "react-router-dom";
 
 
 
@@ -66,6 +67,19 @@ export default function Products(){
         <p className="text-gray-600">
           Our latest research brings high-yield hybrid wheat seed, ensuring greater resistance and productivity.
         </p>
+
+        <div className="flex justify-end relative py-4">
+          <Link to ="/contact">
+        <button className="px-6 py-2 rounded-full  border-2 border-yellow-500 animate-bounce font-bold text-black ">
+        {/* <img 
+    src="/Home.png" 
+    alt="icon" 
+    className="absolute -top-2 -right-3 w-11 h-11"
+  /> */}
+    Enquire Now
+        </button>
+        </Link>
+    </div>
       </div>
     </div>
 
