@@ -6,25 +6,25 @@ const testimonials = [
   {
     name: "Mukesh Chaudhary",
     role: "farmer",
-    image: "/planting.png",
+    image: "/testimonial.png",
     feedback: "वसुंधरा सीट पर बहुत अच्छी क्वालिटी के गेहूं उपलब्ध होते हैं"
   },
   {
     name: "आजाद चौरसिया",
     role: "Farmer",
-    image: "/planting.png",
+    image: "/testimonial.png",
     feedback: "बीच के मामले में गुणवत्ता के साथ विश्वास ही वसुंधरा की पहचान है हमारे उज्जैन के लिए बहुत ही सम्मान का विषय है उज्जैन की शान वसुंधरा सीड्स, किसान का विश्वास वसुंधरा सीड्स की पहचान..🚩जय श्री महाकाल🚩 …"
   },
   {
-    name: "Deepaj Borkar",
+    name: "Deepak Borkar",
     role: "Farmer",
-    image: "/planting.png",
+    image: "/testimonial.png",
     feedback: "Good people always their to help farmers with latest innovations."
   },
   {
     name: "Vaibhav Patidar",
     role: "Farmer",
-    image: "/planting.png",
+    image: "/testimonial.png",
     feedback: "Best seeds of mp are available here"
   }
 ];
@@ -50,9 +50,10 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12 px-6" style = {{backgroundImage:`url('/Home3.png')`}}>
+    <section className="bg-gray-100 py-12 px-6 ">
+
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Testimonials</h2>
+        <div className="flex justify-center"><h2 className="text-3xl font-bold text-gray-800 border-b-2 border-yellow-900">Testimonials</h2></div>
         <p className="text-gray-600 mb-8">Hear from our satisfied customers</p>
 
         <div className="relative flex justify-center items-center">
@@ -71,7 +72,7 @@ const TestimonialsSection = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.5 }}
-            className=" p-6 rounded-xl shadow-lg max-w-lg mx-6 text-center bg-green-800"
+            className=" p-6 rounded-xl shadow-lg max-w-lg mx-6 text-center bg-gradient-to-tl from-stone-500 via-green-400 to-green-900"
           >
             <img
               src={testimonials[currentIndex].image}
@@ -98,9 +99,8 @@ const TestimonialsSection = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? "bg-green-500" : "bg-gray-300"
-              } transition-all`}
+              className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-green-900" : "bg-stone-400"
+                } transition-all`}
             />
           ))}
         </div>

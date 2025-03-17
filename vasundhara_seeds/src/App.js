@@ -1,22 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
-import Inwards from './pages/Inwards';
-import DashBoard from './components/DashBoard';
-import Inventory from './components/Inventory';
-import Invoices from './components/Invoices';
 import Footer from './components/Footer';
-import readExcel from './utils/utils.js'
 import { useEffect, useState } from 'react';
 import './styles.css'
-import LabourData from './components/LabourData.js';
-import AnimatedCalculation from './components/animate.js';
 import Home from './components/Home.js';
-import MainPage from './components/MainPage.js';
 import About from './components/About.js';
 import Navbar from './components/Navbar.js';
 import Infrastructure from './components/Infrastructure.js';
 import Breadcrumb from './components/BreadCrumbs.js';
-import ScrollToTop from './utils/scrollToTop.js';
 import ContactUs from './components/Contact.js';
 import Products from './components/products.js';
 
@@ -40,7 +31,6 @@ function App() {
  return(
   <div>
     <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
-    <ScrollToTop/>
     <Navbar/>
     <div className="content">
 
